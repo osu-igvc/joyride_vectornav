@@ -109,11 +109,11 @@ public:
     declare_parameter<int>("BO1.imuField", vn::protocol::uart::ImuGroup::IMUGROUP_NONE);
     declare_parameter<int>(
       "BO1.gpsField",
-      vn::protocol::uart::GpsGroup::GPSGROUP_FIX | vn::protocol::uart::GpsGroup::GPSGROUP_POSU);
+      vn::protocol::uart::GpsGroup::GPSGROUP_FIX | vn::protocol::uart::GpsGroup::GPSGROUP_NUMSATS | vn::protocol::uart::GpsGroup::GPSGROUP_POSU);
     declare_parameter<int>(
       "BO1.attitudeField", vn::protocol::uart::AttitudeGroup::ATTITUDEGROUP_NONE);
     declare_parameter<int>(
-      "BO1.insField", vn::protocol::uart::InsGroup::INSGROUP_POSECEF |
+      "BO1.insField", vn::protocol::uart::InsGroup::INSGROUP_POSLLA | vn::protocol::uart::InsGroup::INSGROUP_POSECEF |
                         vn::protocol::uart::InsGroup::INSGROUP_VELBODY);
     declare_parameter<int>("BO1.gps2Field", vn::protocol::uart::GpsGroup::GPSGROUP_NONE);
 
